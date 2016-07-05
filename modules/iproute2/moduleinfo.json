@@ -1,0 +1,16 @@
+{
+    "name": "iproute2",
+    "description": "A module providing static IP configuration using the iproute2 package",
+    "author": "Leon Weber <leon.weber@mailbox.tu-dresden.de>",
+    "version": "0.0.1",
+    "supported_platforms": ["debian-based", "fedora"],
+    "provides": ["ip-address-static"],
+    "raises_events": ["network-started"],
+    "run_before": [],
+    "run_after": [],
+    "required_packages": {
+        "debian-based": ["iproute"],
+        "fedora": ["iproute"]
+    }
+}
+

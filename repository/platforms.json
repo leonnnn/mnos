@@ -1,0 +1,7 @@
+{
+    "debian": "Debian GNU/Linux (without derivatives)",
+    "debian-based": "Debian GNU/Linux or any derivatives",
+    "ubuntu": "Ubuntu Linux",
+    "fedora": "Fedora",
+    "linux": "Any Linux distribution"
+}

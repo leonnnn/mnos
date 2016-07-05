@@ -1,0 +1,25 @@
+Modules need to implement a defined API.  A module will be imported
+using python’s import machinery.  The imported module needs to provide a
+single method:
+
+set_up(**kwargs):
+    This method should return a module object that implements the rest of
+    the API.  Typically, the set_up() method will call the constructor of a
+    class which implements the module’s functionality.
+
+The module object needs to implement the following methods:
+
+module.install():
+    This method should perform any action that needs to be done /once/ when
+    the module is first installed (not at every system start).  Typically,
+    this is the usual place to install necessary system packages.
+
+module.run():
+    This method should perform all actions that need to be done in order
+    for the module to start providing its intended functionality.  For
+    example, this will usually include generating config files from
+    templates and calling init scripts to start a daemon.
+
+module.teardown():
+    This method will be called when the system is about to shut down and
+    should perform any action that is required for a clean poweroff.

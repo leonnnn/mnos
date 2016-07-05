@@ -1,0 +1,4 @@
+driftfile /var/lib/ntp/ntp.drift
+{% for server in servers %}
+server {{ server[1] }} {{ servers[server]["options"] }}
+{%- endfor %}

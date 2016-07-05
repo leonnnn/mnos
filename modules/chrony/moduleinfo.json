@@ -1,0 +1,12 @@
+{
+    "name": "chrony",
+    "description": "A module providing NTP support using chrony",
+    "supported_platforms": ["debian-based", "fedora"],
+    "provides": "ntp",
+    "run_before": [],
+    "run_after": ["network-started"],
+    "required_packages": {
+        "debian-based": ["chrony"],
+        "fedora": ["chrony"]
+    }
+}

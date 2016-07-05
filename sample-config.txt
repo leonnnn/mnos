@@ -1,0 +1,19 @@
+modules {
+    iproute2 {
+    }
+    chrony {
+    }
+}
+interfaces {
+    ethernet eth0 {
+        address 10.10.0.1/16
+    }
+}
+system {
+    ntp {
+        server 0.pool.ntp.org {
+        }
+        server 1.pool.ntp.org {
+        }
+    }
+}
